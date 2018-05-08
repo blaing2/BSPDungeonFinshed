@@ -187,7 +187,6 @@ GameObject:
   m_Component:
   - component: {fileID: 713000315}
   - component: {fileID: 713000316}
-  - component: {fileID: 713000314}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -195,28 +194,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &713000314
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 713000313}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0202ad41a6a830847962cf746b86205b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentMinIndex: 0
-  currentMaxIndex: 0
-  hallMinCross: 0
-  hallMaxCross: 0
-  arrayOne: 01000000020000000500000006000000
-  arrayTwo: 010000000200000003000000040000000500000006000000090000000a0000000b0000000c0000000d0000000e000000
-  arrayThree: 01000000020000000500000006000000090000000a0000000d0000000e000000
-  arrayFour: 01000000020000000500000006000000
-  arrayFive: 01000000020000000500000006000000
-  arraySix: 010000000200000003000000040000000500000006000000090000000a0000000b0000000c0000000d0000000e000000
-  arraySeven: 01000000020000000500000006000000
 --- !u!4 &713000315
 Transform:
   m_ObjectHideFlags: 0
@@ -228,7 +205,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &713000316
 MonoBehaviour:
@@ -241,9 +218,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8149f94ac76f7244a4f764db2bf4fba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelWidth: 32
-  levelHeight: 32
-  numberOfSplits: 4
+  levelWidth: 128
+  levelHeight: 128
+  numberOfSplits: 10
   typeOfDrive: F
 --- !u!1 &873346295
 GameObject:
@@ -325,59 +302,4 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1516865051
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1516865053}
-  - component: {fileID: 1516865052}
-  m_Layer: 0
-  m_Name: Map Maker
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &1516865052
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1516865051}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f2bf0d3628bed248baeb154ba6b0ed3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  numberOfPartitions: 2
-  mapWidth: 20
-  mapHeight: 20
-  partitionWidth: 0
-  partitionHeight: 0
-  roomWidth: 0
-  roomHeight: 0
-  partition0X: 0
-  partition0Y: 0
-  partition1X: 0
-  partition1Y: 0
-  room0X: 0
-  room0Y: 0
-  room1X: 0
-  room1Y: 0
---- !u!4 &1516865053
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1516865051}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

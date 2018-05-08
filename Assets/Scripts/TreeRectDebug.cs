@@ -12,8 +12,6 @@ public class TreeRectDebug : MonoBehaviour
 
   public int numberOfSplits = 8;
 
-  public string typeOfDrive = "F";
-
   private float totalTimePartitioning;
   private int numberOfTimesPartitioned;
 
@@ -143,6 +141,8 @@ public class TreeRectDebug : MonoBehaviour
   }
 
   #region Display Stuff
+  /** Display Partitions:
+   * isnt useful since you can just display rooms
   public void DisplayPartitions(BinaryTree<RectInt> node)
   {
     List<BinaryTreeNode<RectInt>> leaves = new List<BinaryTreeNode<RectInt>>();
@@ -212,9 +212,10 @@ public class TreeRectDebug : MonoBehaviour
 
     string content = sb.ToString();
 
-    File.WriteAllText(typeOfDrive + ":\\School\\Game_Programming\\Project4_DungeonBSPNonRandomRoomSizes\\Assets\\LangugeFile\\DisplayPartitions.bspd", content);
+    //File.WriteAllText(typeOfDrive + ":\\School\\Game_Programming\\Project4_DungeonBSPNonRandomRoomSizes\\Assets\\LangugeFile\\DisplayPartitions.bspd", content);
 
   }
+  */
 
   public void DisplayRooms(BinaryTree<RectInt> node)
   {
@@ -228,27 +229,6 @@ public class TreeRectDebug : MonoBehaviour
     foreach (BinaryTreeNode<RectInt> leaf in roomLeaves)
     {
       RectInt leafWorld = NodeRectWorld(leaf);
-
-      //for (int c = 0; c < levelWidth; c++)
-      //{
-      //  for (int h = 0; h < levelHeight; h++)
-      //  {
-
-      //    if (c == leafWorld.x && h == leafWorld.y)
-      //    {
-      //      for (int cW = 0; cW < leafWorld.width; cW++)
-      //      {
-
-      //        for (int cH = 0; cH < leafWorld.height; cH++)
-      //        {
-
-      //          twoDim[cW + leafWorld.x, cH + leafWorld.y] = "F\t";
-
-      //        }
-      //      }
-      //    }
-      //  }
-      //}
 
       for (int i = 0; i < leafWorld.width; i++)
       {
@@ -325,7 +305,7 @@ public class TreeRectDebug : MonoBehaviour
 
     string content = sb.ToString();
 
-    File.WriteAllText(typeOfDrive + ":\\School\\Game_Programming\\Project4_DungeonBSPNonRandomRoomSizes\\Assets\\LangugeFile\\DisplayBaseRooms.bspd", content);
+    File.WriteAllText(Path.GetFullPath(@"Assets") + "\\LanguageFile\\DisplayBaseRooms.bspd", content);
 
   }
 
